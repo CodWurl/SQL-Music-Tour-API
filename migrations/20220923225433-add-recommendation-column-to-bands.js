@@ -1,25 +1,18 @@
-'use strict';
-const {Datatypes} = require('sequelize')
+
+'use strict'
+const { DataTypes } = require('sequelize')
 
 module.exports = {
-   up:async (queryInterface, Sequelize) => {
-    await queryInterface.addColumn ('bands', 'recommendation',{
-      type : Datatypes.STRING
+  up: async (queryInterface, Sequelize) => {
+    await queryInterface.addColumn('bands', 'recommendation', {
+        type: DataTypes.STRING
     })
-    /**
-     * Add altering commands here.
-     *
-     * Example:
-     * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
-     */
   },
 
-  down:async (queryInterface, Sequelize) {
-    /**
-     * Add reverting commands here.
-     *
-     * Example:
-     * await queryInterface.dropTable('users');
+  down: async (queryInterface, Sequelize) => {
+    /*
+     ...
      */
   }
-};
+}                
+
