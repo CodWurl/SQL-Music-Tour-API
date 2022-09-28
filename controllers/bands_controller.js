@@ -47,7 +47,7 @@ bands.put('/:id', async (req, res) => {
             }
         })
         res.status(200).json({
-            message: `Successfully updated ${updatedBands} 'bands`
+            message: `Successfully updated ${updatedBands} 'bands'`
         })
     } catch(err) {
         res.status(500).json(err)
