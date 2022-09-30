@@ -1,8 +1,11 @@
 // DEPENDENCIES
-const {Op}=require('sequelize')
-const bands = require('express').Router()
-const db = require('../models')
-const { Band } = db 
+const { Op } = require('sequelize');
+const bands = require('express').Router();
+const db = require('../models');
+const Band = db.band;
+const MeetGreet = db.meet_greet;
+const Event = db.event;
+const SetTime = db.set_time;
 
 // FIND ALL BANDS
 bands.get('/', async (req, res) => {
